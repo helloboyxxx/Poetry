@@ -1,0 +1,17 @@
+/* Nav.css */
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+}
+
+.nav-list li {
+  padding: 30px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: black; /* Or any color you prefer */
+}
