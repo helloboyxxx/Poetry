@@ -7,7 +7,7 @@
 }
 
 .item {
-  background-color: #fff3c6;
+  /* background-color: #fff3c6; */
   /* border: 1px solid #ddd; */
   padding: 10px;
   margin-bottom: 10px;
@@ -16,6 +16,15 @@
 
 .item p {
   margin: 5px 0;
+}
+
+.item:hover {
+  background-color: #ffeca9;
+  cursor: pointer;
+}
+
+.item.active {
+  background-color: #ffd7a9; /* Or any other color you prefer */
 }
 
 .refresh-button {

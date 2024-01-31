@@ -1,3 +1,5 @@
+// import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Nav from './Nav'; // Import your Nav component if you have one
 import Refresh from './pages/Refresh';
@@ -13,8 +15,8 @@ const App = () => {
         <Nav />
         <Routes>
           <Route path="/" element={<BasePage />} />
-          <Route path="/refresh" element={<Refresh />} />
-          <Route path="/collection" element={<Collection />} />
+          <Route path="/refresh" element={<Refresh/>} />
+          <Route path="/collection" element={<Collection/>} />
           <Route path="/creation" element={<Creation />} />
         </Routes>
       </div>

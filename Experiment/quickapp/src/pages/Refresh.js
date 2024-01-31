@@ -5,8 +5,42 @@ import '../App.css';
 
 function Refresh() {
   const [items, setItems] = useState([]);
+  const [activeItemIds, setActiveItemIds] = useState([]);
 
-  // Function to load and randomly select ten items
+  // Helper function to read stored items from localStorage
+  const getStoredItems = () => {
+    const stored = localStorage.getItem('storedItems');
+    return stored ? JSON.parse(stored) : [];
+  };
+
+  const storeItem = (item) => {
+    const storedItems = getStoredItems();
+    if (!storedItems.some(storedItem => storedItem.id === item.id)) {
+      const updatedItems = [...storedItems, item];
+      localStorage.setItem('storedItems', JSON.stringify(updatedItems));
+      setActiveItemIds(prev => [...prev, item.id]); // Mark as active
+    }
+  };
+
+  const removeItem = (item) => {
+    let storedItems = getStoredItems();
+    storedItems = storedItems.filter(storedItem => storedItem.id !== item.id);
+    localStorage.setItem('storedItems', JSON.stringify(storedItems));
+    setActiveItemIds(prev => prev.filter(id => id !== item.id)); // Remove from active
+  };
+
+  const handleLeftClick = (item, event) => {
+    event.preventDefault(); // Prevent default click behavior
+    const isAlreadyActive = activeItemIds.includes(item.id);
+
+    if (isAlreadyActive) {
+      removeItem(item);
+    } else {
+      storeItem(item);
+    }
+  };
+
+  // Function to load and randomly select items
   const loadAndSelectItems = () => {
     fetch('data/sentences-bundle/sentences/d.json') // Adjust the path if your JSON is located elsewhere
       .then((response) => response.json())
@@ -27,17 +61,23 @@ function Refresh() {
   // Load data on component mount
   useEffect(() => {
     loadAndSelectItems();
+    // Initialize activeItemIds from localStorage
+    const storedItems = getStoredItems();
+    setActiveItemIds(storedItems.map(item => item.id));
   }, []);
 
   return (
     <div className="refresh-container">
       <h2>选</h2>
-      {items.map((item, index) => (
-        <div key={index} className="item">
-          <p>{item.hitokoto}</p>
-          {/* Display other item details as needed */}
-        </div>
+
+      {items.map(item => (
+        <p key={item.id} 
+           className={`item ${activeItemIds.includes(item.id) ? 'active' : ''}`}
+           onClick={(e) => handleLeftClick(item, e)} >
+           {item.hitokoto}
+        </p>
       ))}
+      
       <button onClick={loadAndSelectItems} className="refresh-button">换</button>
     </div>
   );

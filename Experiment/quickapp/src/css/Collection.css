@@ -1,0 +1,29 @@
+/* Collection.css */
+.collection-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.collection-item {
+  background-color: #fff3c6;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.collection-item:hover {
+  background-color: #ffeca9;
+  user-select: none;
+}
+
+.collection-item p {
+  margin: 5px 0;
+}
+
+.crossed-out {
+  text-decoration: line-through;
+  color: gray;
+}
+
