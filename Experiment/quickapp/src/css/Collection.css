@@ -7,14 +7,14 @@
 }
 
 .collection-item {
-  background-color: #fff3c6;
+  /* background-color: #fff3c6; */
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 4px;
 }
 
 .collection-item:hover {
-  background-color: #ffeca9;
+  background-color: #fff3c6;
   user-select: none;
 }
 
@@ -22,8 +22,13 @@
   margin: 5px 0;
 }
 
+.collection-item.active {
+  background-color: #ffd7a9;
+}
+
 .crossed-out {
   text-decoration: line-through;
   color: gray;
 }
+
 

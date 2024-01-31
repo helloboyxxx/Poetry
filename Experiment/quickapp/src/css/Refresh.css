@@ -19,12 +19,12 @@
 }
 
 .item:hover {
-  background-color: #ffeca9;
+  background-color: #fff3c6;
   cursor: pointer;
 }
 
 .item.active {
-  background-color: #ffd7a9; /* Or any other color you prefer */
+  background-color: #ffd7a9;
 }
 
 .refresh-button {

@@ -1,0 +1,30 @@
+/* Creation.css */
+.creation-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.creation-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.creation-container li {
+  background-color: #fff3c6;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.creation-container button {
+  background-color: #FFD6C6;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'LXGW WenKai', sans-serif;
+}
