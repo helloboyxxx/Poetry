@@ -10,7 +10,7 @@ import BasePage from './pages/BasePage';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/Poetry">
       <div>
         <Nav />
         <Routes>
