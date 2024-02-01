@@ -61,11 +61,13 @@ const Collection = () => {
     // Retrieve the current creation items from localStorage
     const currentCreationItems = JSON.parse(localStorage.getItem('creationItems')) || [];
     
-    // Add the new item
-    const updatedCreationItems = [...currentCreationItems, item];
+    if (!currentCreationItems.some(creationItem => creationItem.id === item.id)) {
+      // Add the new item
+      const updatedCreationItems = [...currentCreationItems, item];
 
-    // Update localStorage
-    localStorage.setItem('creationItems', JSON.stringify(updatedCreationItems));
+      // Update localStorage
+      localStorage.setItem('creationItems', JSON.stringify(updatedCreationItems));
+    }
   };
 
   const removeFromCreation = (item) => {
