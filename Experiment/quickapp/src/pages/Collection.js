@@ -34,7 +34,7 @@ const CollectionItem = ({ item, onToggleCrossOut, onAddToCreation, onRemoveFromC
       // It's a swipe
       const newCrossedOutState = !isCrossedOut;
       setIsCrossedOut(newCrossedOutState);
-      onToggleCrossOut(item);
+      onToggleCrossOut(item, newCrossedOutState);
     }
   };
 
