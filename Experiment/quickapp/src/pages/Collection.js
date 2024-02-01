@@ -38,6 +38,14 @@ const CollectionItem = ({ item, onToggleCrossOut, onAddToCreation, onRemoveFromC
     }
   };
 
+  // Touch event handlers
+  const handleTouchStart = (e) => {
+    handleMouseDown(e.touches[0]);
+  };
+  const handleTouchEnd = (e) => {
+    handleMouseUp(e.changedTouches[0]);
+  };
+
   return (
     <p 
       // If this item is crossed out, add the 'crossed-out' class
@@ -45,6 +53,8 @@ const CollectionItem = ({ item, onToggleCrossOut, onAddToCreation, onRemoveFromC
       className={`collection-item ${isCrossedOut ? 'crossed-out' : ''} ${isAddedToCreation ? 'active' : ''}`}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
     >
       {item.hitokoto}
     </p>
