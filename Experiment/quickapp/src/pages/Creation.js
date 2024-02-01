@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Draggable from 'react-draggable';
 import '../css/Creation.css';
 
 const Creation = () => {
@@ -21,11 +22,13 @@ const Creation = () => {
     <div className="creation-container">
       <h2>作</h2>
       {creationItems.length > 0 ? (
-        <ul>
-          {creationItems.map((item, index) => (
-            <li key={index}>{item.hitokoto}</li>
-          ))}
-        </ul>
+        creationItems.map((item, index) => (
+          <Draggable key={index}>
+            <div className="draggable-item">
+              {item.hitokoto}
+            </div>
+          </Draggable>
+        ))
       ) : (
         <p>从“集”开始</p>
       )}
