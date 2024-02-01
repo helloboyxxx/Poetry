@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/poetry_deploy/static/css/main.f89fb28c.css",
+    "main.js": "/poetry_deploy/static/js/main.a0b6d591.js",
+    "static/js/496.24c779c1.chunk.js": "/poetry_deploy/static/js/496.24c779c1.chunk.js",
+    "index.html": "/poetry_deploy/index.html",
+    "main.f89fb28c.css.map": "/poetry_deploy/static/css/main.f89fb28c.css.map",
+    "main.a0b6d591.js.map": "/poetry_deploy/static/js/main.a0b6d591.js.map",
+    "496.24c779c1.chunk.js.map": "/poetry_deploy/static/js/496.24c779c1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f89fb28c.css",
+    "static/js/main.a0b6d591.js"
+  ]
+}
