@@ -15,11 +15,12 @@ const CollectionItem = ({ item, onToggleCrossOut, onAddToCreation, onRemoveFromC
 
   
   // ========== Cross-out OR Click  ==========
-  const handleMouseDown = (e) => {
+  const handlePointerDown = (e) => {
     setDragStartX(e.clientX); // Set the starting X position
   };
 
-  const handleMouseUp = (e) => {
+  const handlePointerUp = (e) => {
+    console.log('handleMouseUp')
     const dragDistance = Math.abs(e.clientX - dragStartX);
     if (dragDistance < dDistThres) {
       // It's a click
@@ -38,23 +39,13 @@ const CollectionItem = ({ item, onToggleCrossOut, onAddToCreation, onRemoveFromC
     }
   };
 
-  // Touch event handlers
-  const handleTouchStart = (e) => {
-    handleMouseDown(e.touches[0]);
-  };
-  const handleTouchEnd = (e) => {
-    handleMouseUp(e.changedTouches[0]);
-  };
-
   return (
     <p 
       // If this item is crossed out, add the 'crossed-out' class
       // If this item is added to creation, add the 'collection-item.active' class
       className={`collection-item ${isCrossedOut ? 'crossed-out' : ''} ${isAddedToCreation ? 'active' : ''}`}
-      onMouseDown={handleMouseDown}
-      onMouseUp={handleMouseUp}
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
+      onPointerDown={handlePointerDown}
+      onPointerUp={handlePointerUp}
     >
       {item.hitokoto}
     </p>
