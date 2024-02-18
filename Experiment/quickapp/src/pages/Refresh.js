@@ -68,8 +68,6 @@ function Refresh() {
 
   return (
     <div className="refresh-container">
-      <h2>选</h2>
-
       {items.map(item => (
         <p key={item.id} 
            className={`item ${activeItemIds.includes(item.id) ? 'active' : ''}`}

@@ -27,4 +27,24 @@
   cursor: pointer;
   font-size: 16px;
   font-family: 'LXGW WenKai', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.creation-container {
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: center;
+}
+
+
+.draggable-item {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #f9f9f9; /* Light background to contrast with the border */
+  cursor: grab;
 }

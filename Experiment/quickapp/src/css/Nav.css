@@ -11,7 +11,13 @@
   padding: 30px;
 }
 
-.nav-list a {
+.nav-list li a { /* Style for all nav links */
   text-decoration: none;
-  color: black; /* Or any color you prefer */
+  padding: 5px 10px; /* Adjust padding */
+}
+
+.active-nav-item {
+  background-color: #5da962; /* Highlight color for active nav item */
+  color: rgb(255, 255, 255); /* Text color for active nav item */
+  border-radius: 5px; /* Optional: for rounded corners */
 }

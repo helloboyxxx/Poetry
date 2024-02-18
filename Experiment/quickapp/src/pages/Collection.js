@@ -114,7 +114,6 @@ const Collection = () => {
 
   return (
     <div className="collection-container">
-      <h2>集</h2>
       {storedItems.map((item, index) => (
         <CollectionItem 
           key={index} 

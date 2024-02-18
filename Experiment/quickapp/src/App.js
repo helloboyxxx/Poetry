@@ -1,7 +1,7 @@
 // import React, { useState } from 'react';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Nav from './Nav'; // Import your Nav component if you have one
+import Nav from './pages/Nav'; // Import your Nav component if you have one
 import Refresh from './pages/Refresh';
 import Collection from './pages/Collection';
 import Creation from './pages/Creation';
