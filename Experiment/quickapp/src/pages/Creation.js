@@ -67,7 +67,7 @@ const Creation = () => {
 
   // Function to determine width based on sentence length
   const widthForItem = (sentence) => {
-    const baseWidth = 100; // Base width in pixels
+    const baseWidth = 200; // Base width in pixels
     const widthPerCharacter = 10; // Additional width per character
     return `${baseWidth + sentence.length * widthPerCharacter}px`;
   };
@@ -81,8 +81,11 @@ const Creation = () => {
 
   return (
     <div className="creation-container">
-      <button onClick={resetPositions}>归位</button>
-      <button onClick={clearCreationItems}>清空</button>
+      <div className='buttons-container'>
+        <button onClick={resetPositions} className='creation-reset'>归位</button>
+        <button onClick={clearCreationItems} className='creation-reset'>清空</button>
+      </div>
+      <div className='items-container'></div>
       {creationItems.length > 0 ? (
         creationItems.map((item, index) => (
           <Draggable 

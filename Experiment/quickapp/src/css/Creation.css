@@ -1,24 +1,17 @@
 /* Creation.css */
 .creation-container {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 10px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: center;
 }
 
-.creation-container ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.creation-container li {
-  background-color: #fff3c6;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 4px;
-}
-
-.creation-container button {
+.creation-reset {
   background-color: #FFD6C6;
   color: black;
   padding: 10px 20px;
@@ -27,24 +20,24 @@
   cursor: pointer;
   font-size: 16px;
   font-family: 'LXGW WenKai', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-
-.creation-container {
-  gap: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:center;
-  align-items: center;
-}
-
 
 .draggable-item {
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
-  background-color: #f9f9f9; /* Light background to contrast with the border */
   cursor: grab;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.items-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
