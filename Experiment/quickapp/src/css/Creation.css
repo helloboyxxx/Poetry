@@ -1,6 +1,6 @@
 /* Creation.css */
 .creation-container {
-  max-width: 800px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 10px;
   text-align: center;
@@ -32,6 +32,7 @@
 .buttons-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -40,4 +41,8 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
+}
+
+.hidden { 
+  display: none; 
 }
